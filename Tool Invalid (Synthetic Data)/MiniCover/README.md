@@ -35,8 +35,6 @@ to the sibling Clean corpus's own finding.
 
 | Family | Toolchain | Compiles | Result |
 |---|---|---|---|
-| `netfx45` | .NET Framework 4.5 (Mono 6.8.0.105 BCL profile 4.5) | yes | NOT_INSTALLED |
 | `netfx46` | .NET Framework 4.6 (Mono 6.8.0.105 BCL profile 4.6) | yes | NOT_INSTALLED |
-| `netcoreapp30` | netcoreapp3.0 (manual csc, SDK 8.0.131's compiler + installed 8.0.31 runtime) | yes | NOT_INSTALLED |
-| `net9` | net9.0 (manual csc, SDK 10.0.112's compiler + installed 10.0.12 runtime) | yes | NOT_INSTALLED |
-| `net10` | net10.0 (dotnet-sdk-10.0, native) | yes | NOT_INSTALLED |
+
+This repo carries only the `netfx46` family.
