@@ -1,60 +1,35 @@
-# C# Tool-Evaluation Corpus
+# C# Corpus -- Tool Invalid (Synthetic Data)
 
 `main` carries only this overview -- it holds no project code. Every other
-branch in this repository is a complete, independently buildable project for
-one exact combination of .NET version, bundler (`SDK-style MSBuild`/`Cake`/`.NET CLI`), package manager (`NuGet PackageReference`/`NuGet packages.config`/`Paket`/`Central Package Management`) and architecture (`Monolith`/`Microservices`).
+branch in this repository is one cell of `testable-platform/csharp-corpus`, split out to carry
+only the `Tool Invalid (Synthetic Data)/` folder (plus that branch's own build scaffolding).
 
-This repository consolidates what used to be 65 separate small repositories
-into one repository holding all 312 branches, so the full corpus for this
-language lives in a single place.
+This repository was produced by splitting `testable-platform/csharp-corpus` by task folder.
+`testable-platform/csharp-corpus` itself was not modified by this split and still holds the
+full combined corpus.
+
+## Scope
+
+This repo covers the 5 boundary .NET families (netfx45, netfx46, netcoreapp30, net9, net10) across the full build-tool x dependency-manager x architecture combination (120 branches total). Each branch carries only its own family's data inside `Tool Invalid (Synthetic Data)/` -- not all 5 boundary families bundled together.
 
 ## Branch naming
 
-Every branch name encodes its own identity, so the name alone tells you what
-it is without needing to open it:
+Branch names are unchanged from `testable-platform/csharp-corpus`:
 
 ```
-CS_V{ver}_{BUNDLER}_{PKGMGR}_{ARCH}
+CS_V{family}_{BUILD_TOOL}_{DEPENDENCY_MANAGER}_{ARCHITECTURE}
 ```
-
-## Versions in this corpus
-
-13 .NET versions, 24 branches each (one per bundler x package manager x
-architecture combination):
-
-| .NET version | Branches |
-|---|---|
-| NETFX45 | 24 |
-| NETFX46 | 24 |
-| NETFX462 | 24 |
-| NETFX47 | 24 |
-| NETFX471 | 24 |
-| NETFX472 | 24 |
-| NETCOREAPP30 | 24 |
-| NET5 | 24 |
-| NET6 | 24 |
-| NET7 | 24 |
-| NET8 | 24 |
-| NET9 | 24 |
-| NET10 | 24 |
 
 ## Finding a branch
 
-Each branch's own `README.md` describes its exact cell (version, bundler,
-package manager, architecture) and its full tool roster. `dataset.json` on
-each branch is the machine-readable answer key for that cell.
+Each branch's own `README.md` describes its exact cell (.NET family, build
+tool, dependency manager, architecture) and its tool roster, trimmed to the
+parts relevant to `Tool Invalid (Synthetic Data)/`. `dataset.json` on each branch is the
+machine-readable answer key for that cell (unmodified by this split -- it
+still describes the branch's original full 19-tool/5-folder state).
 
 ## History
 
-Branches were moved into this repository by relocating their existing git
-history under a new name; commit dates, parentage and every tree are unchanged
-from before consolidation.
-
-In October 2026 the commit *messages* and author identities were rewritten
-once: placeholder contributor names were replaced, and several author spellings
-of the same person were folded into one. No commit was squashed, added or
-dropped, and no file content changed.
-
-Tools that read commit history -- churn, ownership, `pydriller` -- see four
-contributors on every branch, which is what each branch's `dataset.json`
-asserts under `expectations.controlAssertions`.
+Each branch's commit history is carried over unchanged from `testable-platform/csharp-corpus`,
+with one additional commit on top that removes the folders not relevant to
+this repo. Nothing was squashed or rewritten.
