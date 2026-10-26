@@ -57,11 +57,7 @@ sibling Clean folder documents.
 
 | Family | Toolchain | Compiles | Result |
 |---|---|---|---|
-| `netfx45` | .NET Framework 4.5 (Mono 6.8.0.105 BCL profile 4.5) | yes | NOT_INSTALLED |
-| `netfx46` | .NET Framework 4.6 (Mono 6.8.0.105 BCL profile 4.6) | yes | NOT_INSTALLED |
-| `netcoreapp30` | netcoreapp3.0 (manual csc, SDK 8.0.131's compiler + installed 8.0.31 runtime) | yes | NOT_INSTALLED |
 | `net9` | net9.0 (manual csc, SDK 10.0.112's compiler + installed 10.0.12 runtime) | yes | NOT_INSTALLED |
-| `net10` | net10.0 (dotnet-sdk-10.0, native) | yes | **FINDING** (2 real CA1822 errors, build fails) |
 
 **Only net10 actually runs `dotnet build` with the SDK's bundled
 NetAnalyzers** -- identical to the sibling Clean corpus's own Roslyn
@@ -81,3 +77,5 @@ the family** -- every other live-checkable tool's row is flat (FINDING x5),
 not because the family never held it back, but because each of those
 tools' own blocker (or, here, enabler) is entirely independent of target
 framework.
+
+This repo carries only the `net9` family.
