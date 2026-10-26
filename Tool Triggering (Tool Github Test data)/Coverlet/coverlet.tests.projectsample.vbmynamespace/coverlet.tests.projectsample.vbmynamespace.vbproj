@@ -1,9 +1,0 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <RootNamespace>coverlet.tests.projectsample.vbmynamespace</RootNamespace>
-    <TargetFramework>net48</TargetFramework>
-    <LangVersion>latest</LangVersion>
-  </PropertyGroup>
-
-</Project>
