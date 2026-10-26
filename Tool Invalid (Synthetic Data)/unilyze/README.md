@@ -67,12 +67,10 @@ families below.
 
 | Family | Toolchain | Compiles | Result |
 |---|---|---|---|
-| `netfx45` | .NET Framework 4.5 (Mono 6.8.0.105 BCL profile 4.5) | yes | **FINDING** (3/4 methods over threshold) |
-| `netfx46` | .NET Framework 4.6 (Mono 6.8.0.105 BCL profile 4.6) | yes | **FINDING** (3/4 methods over threshold) |
-| `netcoreapp30` | netcoreapp3.0 (manual csc, SDK 8.0.131's compiler + installed 8.0.31 runtime, rollForward LatestMajor) | yes | **FINDING** (3/4 methods over threshold) |
-| `net9` | net9.0 (manual csc, SDK 10.0.112's compiler + installed 10.0.12 runtime, rollForward LatestMajor) | yes | **FINDING** (3/4 methods over threshold) |
 | `net10` | net10.0 (dotnet-sdk-10.0, native) | yes | **FINDING** (3/4 methods over threshold) |
 
 Identical source, identical measured result, across all five boundary
 families -- unilyze reads IL/source, not a language-version syntax gate, so
 the finding does not and should not move with the target framework.
+
+This repo carries only the `net10` family.
