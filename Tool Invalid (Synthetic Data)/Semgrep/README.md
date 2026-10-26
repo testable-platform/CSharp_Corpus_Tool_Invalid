@@ -52,12 +52,10 @@ checked individually in the generator's own build log.
 
 | Family | Toolchain | Compiles | Result |
 |---|---|---|---|
-| `netfx45` | .NET Framework 4.5 (Mono 6.8.0.105 BCL profile 4.5) | yes | **FINDING** (4/4 rules fire) |
-| `netfx46` | .NET Framework 4.6 (Mono 6.8.0.105 BCL profile 4.6) | yes | **FINDING** (4/4 rules fire) |
 | `netcoreapp30` | netcoreapp3.0 (manual csc, SDK 8.0.131's compiler + installed 8.0.31 runtime) | yes | **FINDING** (4/4 rules fire) |
-| `net9` | net9.0 (manual csc, SDK 10.0.112's compiler + installed 10.0.12 runtime) | yes | **FINDING** (4/4 rules fire) |
-| `net10` | net10.0 (dotnet-sdk-10.0, native) | yes | **FINDING** (4/4 rules fire) |
 
 Identical source, identical measured result, across all five boundary
 families -- Semgrep's grammar is version-blind, so the finding does not
 and should not move with the language version.
+
+This repo carries only the `netcoreapp30` family.
